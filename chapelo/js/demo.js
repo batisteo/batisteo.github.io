@@ -1,3 +1,5 @@
 $(function () {
-	$('.chap').chapelo();
+    $('.chap').chapelo();
+
+    $('#chap-general-toggle').bootstrapSwitch();
 });

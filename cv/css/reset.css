@@ -1,0 +1,73 @@
+
+html
+{
+	height: 100%;
+	padding: 0;
+	margin: 0;
+}
+
+body
+{
+	height: 100%;
+	font: normal 14px/normal Helvetica, Tahoma, sans-serif;
+	letter-spacing: 0px;
+	line-height: 20px;
+	color: #eee;
+	background: #222;
+	padding: 0;
+	margin: 0;
+}
+
+
+/* default settings */
+
+ul, ol, li,
+h1, h2, h3, h4, h5, h6,
+div, p, span, em, pre, blockquote, abbr, acronym, a,
+dl, dt, dd,
+table, tr, th, td, thead, tbody, tfoot, caption,
+form, fieldset, legend, input, textarea, select, button, label
+{
+	font-size: 100%;
+	font-family: inherit;
+	font-weight: normal;
+	font-style: inherit;
+	line-height: inherit;
+	outline: 0;
+	border: 0;
+	padding: 0;
+	margin: 0;
+
+}
+
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6
+{
+	font: italic normal 30px/normal Baskerville, Palatino, 'Palatino Linotype', Georgia, Serif;
+	text-decoration: none;
+	color: #eee;
+	margin: 0 0 10px;
+}
+
+
+a				{ color: #eee; }
+a:hover 		{ text-decoration: underline; color: white; position: relative; top: -1px;}
+a img			{ border: none; }
+small			{ font-size: 85%; }
+big				{ font-size: 120%; }
+em				{ font-style: italic; }
+/*
+p, li			{ line-height: 22px; margin: 0 0 20px; }
+*/
+
+
+
+table			{ border-collapse: separate; border-spacing: 0; }
+
+ul				{ list-style-type: none; }
+

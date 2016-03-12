@@ -1,68 +1,74 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<html lang="eo">
     <head>
         <meta charset="utf-8">
-        <link rel="icon" type="image/png" href="favicon.png" />
-        <title>Ĉapelo - jQuery plugin for Esperanto accents</title>
+        <link rel="icon" type="image/png" href="logo_chapelo_sm.png" />
+        <title>Ĉapelo - la ŝika jQuery kromaĵo por la Esperantaj supersignoj</title>
         <link rel="stylesheet" href="css/bootstrap.min.css">
         <link rel="stylesheet" href="css/bootstrap-switch.min.css">
-        <script src="js/jquery.js"></script>
-        <script src="js/bootstrap-switch.min.js"></script>
+        <script src="js/jquery.min.js"></script>
         <script src="js/demo.js"></script>
-        <script src="js/jquery.chapelo.js"></script>
-        <!-- <script src="js/chapelaro.js"></script> -->
+        <script src="js/jquery.chapelo.min.js"></script>
         <style type="text/css">
-            h1, section, footer {text-align: center}
-            h2 {margin-top: 3em;}
-            pre {text-align: left; margin: 0 auto; width: 30rem}
+            h1, h3, section, footer {text-align: center}
+            pre {text-align: left; margin: 0 auto; width: 45rem}
             .form-group {margin: 2em auto; max-width: 500px}
         </style>
     </head>
 
     <body>
-<!--
-        <h1><img src="chapelo.png" alt="Ĉapelo" title="Ĉapelo" /></h1>
--->
 
-        <h1>jQuery plugin for Esperanto accents</h1>
+        <h1><img src="chapelo.svg" alt="Ĉapelo" title="Ĉapelo" /></h1>
+
+
+        <h3 class="well">La ŝika jQuery kromaĵo por la Esperantaj supersignoj</h3>
 
         <section>
-            <h2>Replace the <strong>x</strong>, <strong>h</strong> and <strong>^</strong> suffixes by default</h2>
+            <h4>Anstataŭigas la “<strong>x</strong>”, “<strong>h</strong>” kaj “<strong>^</strong>”,
+                la prefikson “<strong>^</strong>”, “<strong>eŭ</strong>” kaj “<strong>aŭ</strong>”
+            </h4>
 
             <div class="form-group">
-                <input type="text" id="kampo1" class="chap chap-diphthong-off"value="Provu cxi-tie: Au" />
+                <input type="text" id="tekstkampo" class="form-control input-lg chap" value="Provu ci-tie: " />
             </div>
 
-            <div class="form-group">
-                <input type="search" id="kampo1" class="chap chap-diphthong-off"value="Sercxo" />
-            </div>
-            <p><pre>  $('.chap').chapelo();</pre></p>
-            <p> <kbd>Alt</kbd> + <kbd>Enter</kbd> </p>
+            <hr>
+
+            <p>Vi povas malfari per <kbd title="retropaŝo">&lt;–––</kbd> aŭ denove <kbd>x</kbd> aŭ <kbd>h</kbd></p>
+            
             <p>
-                <button data-chap-field-id="kampo1" type="button" name="button" id="replaceall" class="btn btn-primary">Replace All</button>
+                Provu <kbd title="Alt-klavo">Alt</kbd> + <kbd title="Enigo-klavo">Enter</kbd>,
+                kaj poste <kbd title="Stirklavo">Ctrl</kbd> + <kbd>Z</kbd>
             </p>
 
             <div class="form-group">
-                <div class="input-group">
-                    <span class="input-group-addon">
-                        <input type="checkbox" data-chap-toggle-id="kampo2" class="chap-field-toggle" checked aria-label="active" />
-                    </span>
-                    <div id="kampodiv" contenteditable="true" class="form-control chap" style="text-align: left">Ehxoshang^o Chiuj^auxde!</div>
+                <textarea id="tekstareo" class="form-control input-lg chap" rows="3">Ehxoshang^o Chiuj^auxde!
+J’aime les châteaux forts et Citroën CX!</textarea>
                 </div>
+
+            <hr>
+            <p>Ĉapelo ankaŭ funkcias en riĉaj tekstkampoj! </p>
+            
+            <div class="form-group">
+                <div id="kampodiv" class="form-control input-lg chap" contenteditable="true">
+                    Mi <em style="color:darkred">♥ ŝatas</em>
+                    <strong style="color:white;background:#072B07"> Ĉapelon! </strong> 
+                    <a href="https://batisteo.github.io/chapelo/chapeligi/">Ĉu ligilo?</a> 
+                </div>
+                <span style="color:gray">&lt;div contenteditable="true"'&gt;HTML redaktebla enhavo&lt;/div&gt;</span>
             </div>
 
-            <div class="form-group">
-                <div class="input-group">
-                    <span class="input-group-addon">
-                        <input type="checkbox" data-chap-toggle-id="kampo2" class="chap-field-toggle" checked aria-label="active" />
-                    </span>
-                    <textarea id="kampo2" class="form-control chap" rows="4">Châteaux forts en Citroën CX!</textarea>
-                </div>
-            </div>
+            <hr>
+
+            <p>Nur aldonante tiujn 2 liniojn:
+                <pre><code>  &lt;script src='/js/<strong>jquery.chapelo.min.js</strong>'&gt;&lt;/script&gt;</code></pre>
+                <pre><code>  $('.chap').chapelo();</code></pre>
+            </p>
+
 
         <footer>
             <p><a href="https://github.com/batisteo/chapelo">Github</a></p>
-            <p><small>© 2015 Baptiste Darthenay</small></p>
+            <p><small>© 2016 Baptiste Darthenay</small></p>
         </footer>
     </body>
 </html>

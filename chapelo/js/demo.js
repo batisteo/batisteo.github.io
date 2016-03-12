@@ -1,16 +1,9 @@
 $(function () {
-    $('.chap').chapelo({
-        // selectors: "div"
+    $('.chap').chapelo();
+    
+    $('#kampodiv').hover(function () {
+        $(this).prop('contenteditable', 'true').addClass('form-control text-left');
+    }, function () {
+        $(this).prop('contenteditable', 'false').removeClass('form-control text-left');
     });
-
-    $('.alt-suffixes').chapelo({
-        suffixes: "'"
-    });
-
-    $('#chap-general-toggle').bootstrapSwitch();
-
-    $('#replaceall').click(function () {
-        var field = $('#' + $(this).data('chap-field-id'))
-        field[0].chapelo.replaceAll();
-    })
 });
